@@ -1,4 +1,9 @@
 <?php
+// $servername = "sql110.infinityfree.com";
+// $username = "if0_37143452";
+// $password = "sA0PqsKsBz";
+// $database = "if0_37143452_juicybox_db";
+// $port = "9906";
 $servername = "mysql-juicybox";
 $username = "username";
 $password = "password";

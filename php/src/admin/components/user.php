@@ -201,10 +201,10 @@
     const updateClass = (element, addClass, removeClass) => {
         element.addClass(addClass).removeClass(removeClass);
     }
-    const checkPasswordMatch = (input) => {
+    const checkPasswordMatchRev2 = (input) => {
         const textValidPassword = $(input).closest("form").find("[data-text-validate='text-validate-password']");
-        const password = $(input).closest("form").find("[name=password]");
-        const confirmPassword = $(input).closest("form").find("[name=c_password]");
+        const password = $(input).closest("form").find("[name='password']");
+        const confirmPassword = $(input).closest("form").find("[name='c_password']");
 
         if (password.val() === confirmPassword.val()) {
             updateClass(password, "border-success", "border-danger");
@@ -218,10 +218,10 @@
     }
     const handleInputChange = (input) => {
         const textValidPassword = $(input).closest("form").find("[data-text-validate='text-validate-password']");
-        const password = $(input).closest("form").find("[name=password]");
-        const confirmPassword = $(input).closest("form").find("[name=c_password]");
+        const password = $(input).closest("form").find("[name='password']");
+        const confirmPassword = $(input).closest("form").find("[name='c_password']");
         if (confirmPassword.val() !== "") {
-            checkPasswordMatch(input);
+            checkPasswordMatchRev2(input);
         } else {
             confirmPassword.removeClass("border-danger border-success");
         }

@@ -74,6 +74,17 @@ input[type=number]::-webkit-inner-spin-button {
     transform: scale(0.95);
 }
 
+.active-admin-menu {
+    background-color: white !important;
+    color: var(--bs-primary);
+    transform: scale(0.95);
+}
+.active-admin-menu:hover  {
+    background-color: white !important;
+    color: var(--bs-primary);
+    transform: scale(0.95);
+}
+
 
 .btn-primary:active {
     background-color: var(--bs-primary-hover) !important;
@@ -117,7 +128,8 @@ input[type=number]::-webkit-inner-spin-button {
     color: var(--bs-primary) !important;
 }
 
-.form-control:focus,.form-select:focus {
+.form-control:focus,
+.form-select:focus {
     border-color: var(--bs-primary) !important;
     box-shadow: 0 0 0 2px var(--bs-primary-low) !important;
 }

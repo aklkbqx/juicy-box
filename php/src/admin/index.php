@@ -85,7 +85,7 @@ $linkPageAdmin = [
                 <ul class="p-0 mb-5" style="list-style:none;">
                     <?php foreach ($linkPageAdmin as $index => $link) { ?>
                         <li>
-                            <a href="?page=<?= $link['engText']; ?>" class="btn btn-outline-light w-100 fs-5 text-start p-3 d-flex align-items-center mt-2 rounded-4 <?= isset($_GET["page"]) && $_GET["page"] == $link['engText'] ? "active" : ""; ?>" style="gap:10px;"><?= $link["icon"] . " " . $link["thText"]; ?>
+                            <a href="?page=<?= $link['engText']; ?>" class="btn w-100 fs-5 text-start p-3 d-flex align-items-center mt-2 rounded-4 <?= isset($_GET["page"]) && $_GET["page"] == $link['engText'] ? "active-admin-menu" : "btn-outline-light"; ?>" style="gap:10px;"><?= $link["icon"] . " " . $link["thText"]; ?>
                                 <?php
                                 $ordersBadge = sql("SELECT COUNT(*) as `count` FROM `orders` WHERE `status` = ?", ["waiting"])->fetch()["count"];
                                 if ($ordersBadge) {
